@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblDisplayJoke = new System.Windows.Forms.Label();
-            this.txtDisplayjoke = new System.Windows.Forms.TextBox();
             this.btnGetJoke = new System.Windows.Forms.Button();
+            this.rTxtDisplayJoke = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lblDisplayJoke
@@ -42,29 +42,31 @@
             this.lblDisplayJoke.TabIndex = 0;
             this.lblDisplayJoke.Text = "Chuck Norris Joke:";
             // 
-            // txtDisplayjoke
-            // 
-            this.txtDisplayjoke.Location = new System.Drawing.Point(179, 52);
-            this.txtDisplayjoke.Name = "txtDisplayjoke";
-            this.txtDisplayjoke.Size = new System.Drawing.Size(213, 23);
-            this.txtDisplayjoke.TabIndex = 1;
-            // 
             // btnGetJoke
             // 
-            this.btnGetJoke.Location = new System.Drawing.Point(317, 96);
+            this.btnGetJoke.Location = new System.Drawing.Point(306, 197);
             this.btnGetJoke.Name = "btnGetJoke";
             this.btnGetJoke.Size = new System.Drawing.Size(75, 23);
             this.btnGetJoke.TabIndex = 2;
             this.btnGetJoke.Text = "Get Joke";
             this.btnGetJoke.UseVisualStyleBackColor = true;
+            this.btnGetJoke.Click += new System.EventHandler(this.btnGetJoke_Click);
+            // 
+            // rTxtDisplayJoke
+            // 
+            this.rTxtDisplayJoke.Location = new System.Drawing.Point(156, 60);
+            this.rTxtDisplayJoke.Name = "rTxtDisplayJoke";
+            this.rTxtDisplayJoke.Size = new System.Drawing.Size(225, 98);
+            this.rTxtDisplayJoke.TabIndex = 3;
+            this.rTxtDisplayJoke.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rTxtDisplayJoke);
             this.Controls.Add(this.btnGetJoke);
-            this.Controls.Add(this.txtDisplayjoke);
             this.Controls.Add(this.lblDisplayJoke);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -76,7 +78,7 @@
         #endregion
 
         private Label lblDisplayJoke;
-        private TextBox txtDisplayjoke;
         private Button btnGetJoke;
+        private RichTextBox rTxtDisplayJoke;
     }
 }
