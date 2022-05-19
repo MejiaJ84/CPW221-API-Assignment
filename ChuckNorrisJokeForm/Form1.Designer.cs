@@ -69,6 +69,7 @@
             this.cbCategories.Name = "cbCategories";
             this.cbCategories.Size = new System.Drawing.Size(121, 23);
             this.cbCategories.TabIndex = 4;
+            
             // 
             // lblCategories
             // 

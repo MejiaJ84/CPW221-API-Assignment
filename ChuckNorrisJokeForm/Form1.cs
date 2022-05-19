@@ -12,8 +12,16 @@ namespace ChuckNorrisJokeForm
 
         private async void btnGetJoke_Click(object sender, EventArgs e)
         {
-
-            rTxtDisplayJoke.Text = await JokeHelper.RandomChuckJoke();
+            if(cbCategories.SelectedIndex == -1)
+            {
+                rTxtDisplayJoke.Text = await JokeHelper.RandomChuckJoke();
+            }
+            else
+            {
+                Joke joke = await ChuckNorrisClient.GetJokeFromCategory(cbCategories.SelectedItem.ToString());
+                rTxtDisplayJoke.Text = joke.JokeText;
+            }
+            
         }
 
         private async void Form1_Load(object sender, EventArgs e)
