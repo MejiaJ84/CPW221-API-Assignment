@@ -31,6 +31,8 @@
             this.lblDisplayJoke = new System.Windows.Forms.Label();
             this.btnGetJoke = new System.Windows.Forms.Button();
             this.rTxtDisplayJoke = new System.Windows.Forms.RichTextBox();
+            this.cbCategories = new System.Windows.Forms.ComboBox();
+            this.lblCategories = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDisplayJoke
@@ -60,16 +62,36 @@
             this.rTxtDisplayJoke.TabIndex = 3;
             this.rTxtDisplayJoke.Text = "";
             // 
+            // cbCategories
+            // 
+            this.cbCategories.FormattingEnabled = true;
+            this.cbCategories.Location = new System.Drawing.Point(474, 60);
+            this.cbCategories.Name = "cbCategories";
+            this.cbCategories.Size = new System.Drawing.Size(121, 23);
+            this.cbCategories.TabIndex = 4;
+            // 
+            // lblCategories
+            // 
+            this.lblCategories.AutoSize = true;
+            this.lblCategories.Location = new System.Drawing.Point(474, 31);
+            this.lblCategories.Name = "lblCategories";
+            this.lblCategories.Size = new System.Drawing.Size(66, 15);
+            this.lblCategories.TabIndex = 5;
+            this.lblCategories.Text = "Categories:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCategories);
+            this.Controls.Add(this.cbCategories);
             this.Controls.Add(this.rTxtDisplayJoke);
             this.Controls.Add(this.btnGetJoke);
             this.Controls.Add(this.lblDisplayJoke);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,5 +102,7 @@
         private Label lblDisplayJoke;
         private Button btnGetJoke;
         private RichTextBox rTxtDisplayJoke;
+        private ComboBox cbCategories;
+        private Label lblCategories;
     }
 }
